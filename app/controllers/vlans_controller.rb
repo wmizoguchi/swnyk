@@ -10,6 +10,7 @@ class VlansController < ApplicationController
   # GET /vlans/1
   # GET /vlans/1.json
   def show
+    p Vlan.column_names
   end
 
   # GET /vlans/new

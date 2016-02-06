@@ -1,13 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <label>Id:</label>
-  <%= @vlan.id %>
-</p>
-<p>
-  <label>Description:</label>
-  <%= @vlan.description %>
-</p>
+<% Vlan.column_names.each do |column_name| %>
+  <p>
+    <label><%= column_name %>:</label>
+    <%= eval("@vlan.#{column_name}") %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_vlan_path(@vlan), class: 'btn btn-warning' %> |
 <%= link_to 'Back', vlans_path, class: 'btn btn-default' %>
