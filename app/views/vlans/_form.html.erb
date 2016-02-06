@@ -1,0 +1,30 @@
+  <form class="form-horizontal"> <!-- TODO: form-horizontalをform_forにくみこむ！-->
+    <%= form_for(@vlan) do |f| %>
+      <% if @vlan.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@vlan.errors.count, "error") %> prohibited this vlan from being saved:</h2>
+          <ul>
+            <% @vlan.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <div class="form-group">
+          <%= f.label :id, class: "col-lg-2 control-label" %><br>
+          <div class="col-lg-10">
+            <%= f.text_field :id, class: "form-control", placeholder: "description" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :description, class: "col-lg-2 control-label" %><br>
+          <div class="col-lg-10">
+            <%= f.text_field :description, class: "form-control", placeholder: "description" %>
+          </div>
+        </div>
+          <%= f.submit class: 'btn btn-danger' %>
+      </div>
+    <% end %>
+  </form>

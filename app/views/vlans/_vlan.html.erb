@@ -1,0 +1,8 @@
+<tr class='vlan'>
+  <td><%= vlan.id %></td>
+  <td><%= vlan.description %></td>
+  <td><%= vlan.updated_at %></td>
+  <td><%= link_to 'Show', vlan, class: 'btn btn-info' %></td>
+  <td><%= link_to 'Edit', edit_vlan_path(vlan), class: 'btn btn-warning' %></td>
+  <td><%= link_to 'Destroy', vlan, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+</tr>
