@@ -7,5 +7,6 @@
   </p>
 <% end %>
 
+<%= link_to 'Back', vlans_path, class: 'btn btn-default' %> | 
 <%= link_to 'Edit', edit_vlan_path(@vlan), class: 'btn btn-warning' %> |
-<%= link_to 'Back', vlans_path, class: 'btn btn-default' %>
+<%= link_to 'Destroy', @vlan, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
